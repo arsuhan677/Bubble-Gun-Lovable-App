@@ -1,24 +1,9 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "framework": "vite",
   "outputDirectory": "dist",
-  "env": {
-    "VITE_SUPABASE_URL": "@vite_supabase_url",
-    "VITE_SUPABASE_PROJECT_ID": "@vite_supabase_project_id",
-    "VITE_SUPABASE_PUBLISHABLE_KEY": "@vite_supabase_publishable_key"
-  },
   "rewrites": [
     {
-      "source": "/admin",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/admin/dashboard",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/product/:id",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
